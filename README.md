@@ -1,6 +1,8 @@
 Cellular Automata
 =================
 
+![Screenshot](https://raw.githubusercontent.com/drola/cellular-automata/master/docs/screenshot.png)
+
 Project intented to experiment with
 
  - Functional programming
