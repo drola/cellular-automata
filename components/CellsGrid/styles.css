@@ -1,0 +1,7 @@
+.alive rect {
+  fill: #a5cdff;
+}
+
+.dead rect {
+  fill: #e4e4e4;
+}
