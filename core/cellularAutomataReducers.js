@@ -1,4 +1,4 @@
-import {NEXT_STEP} from './cellularAutomataActions';
+import {NEXT_STEP, FLIP_RULE} from './cellularAutomataActions';
 
 function patternToIndex(self, up, down, left, right) {
   self = self ? 1 : 0;
@@ -9,41 +9,6 @@ function patternToIndex(self, up, down, left, right) {
 
   return self * 1 + up * 2 + down * 4 + left * 8 + right * 16;
 }
-
-const rule = [
-  true,
-  true,
-  true,
-  true,
-  false,
-  true,
-  false,
-  false,
-  false,
-  true,
-  true,
-  true,
-  true,
-  false,
-  true,
-  true,
-  true,
-  true,
-  false,
-  true,
-  false,
-  true,
-  true,
-  false,
-  true,
-  true,
-  true,
-  false,
-  true,
-  true,
-  true,
-  false,
-];
 
 export default function(state, action) {
   switch (action.type) {
@@ -60,9 +25,13 @@ export default function(state, action) {
             let left = state.grid[i][(j-1 + N) % N];
             let right  = state.grid[i][(j+1) % N];
 
-            return rule[patternToIndex(self, up, down, left, right)];
+            return state.rule[patternToIndex(self, up, down, left, right)];
           }))
       });
+    case FLIP_RULE:
+      let rule = state.rule.slice(0);
+      rule[action.caseIndex] = action.result;
+      return  Object.assign({}, state, {rule: rule});
 
     default:
       return state;

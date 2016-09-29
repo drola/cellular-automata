@@ -5,3 +5,13 @@ export function nextStep() {
     type: NEXT_STEP
   };
 }
+
+export const FLIP_RULE = 'FLIP_RULE';
+
+export function flipRule(caseIndex, result) {
+  return {
+    type: FLIP_RULE,
+    caseIndex: caseIndex,
+    result: result
+  };
+}

@@ -25,12 +25,44 @@ for(let i = 0; i < N; i++) {
   }
   initialGrid.push(row);
 }
+let initialRule = [
+  false,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+];
 let store = createStore(
   cellularAutomataReducer,
-  {grid: initialGrid}
+  {grid: initialGrid, rule: initialRule}
 );
-
-console.log(store);
 
 class HomePage extends React.Component {
   render() {

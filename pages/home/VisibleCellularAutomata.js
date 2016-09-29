@@ -1,10 +1,11 @@
 import { connect} from 'react-redux';
-import {nextStep} from "../../core/cellularAutomataActions";
+import {nextStep, flipRule} from "../../core/cellularAutomataActions";
 import CellularAutomata from "./CellularAutomata";
 
 const mapStateToProps = (state) => {
   return {
-    grid: state.grid
+    grid: state.grid,
+    rule: state.rule
   }
 };
 
@@ -12,6 +13,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onNextButtonClick: () => {
       dispatch(nextStep())
+    },
+    onFlipRule: (caseIndex, newResult) => {
+      dispatch(flipRule(caseIndex, newResult));
     }
   }
 };

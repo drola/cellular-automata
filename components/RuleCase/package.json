@@ -1,0 +1,6 @@
+{
+  "name": "RuleCase",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./RuleCase.js"
+}

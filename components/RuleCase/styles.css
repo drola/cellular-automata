@@ -1,0 +1,16 @@
+.alive rect {
+  fill: #a5cdff;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+.dead rect {
+  fill: #e4e4e4;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+.ruleCase {
+  margin: 12px;
+  margin-left: 0;
+}
