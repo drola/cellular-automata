@@ -11,6 +11,10 @@
 }
 
 .ruleCase {
-  margin: 12px;
-  margin-left: 0;
+  margin: 10px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+.ruleCase:hover {
+  background-color: #eee;
 }

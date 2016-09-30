@@ -26,7 +26,10 @@ From https://en.wikipedia.org/wiki/Cellular_automaton:
  
 ### TODO
 
- - Explain rules better or make editing them more intuitive
+ - Rule presets. See http://mathworld.wolfram.com/GameofLife.html
+ - Buttons to alter state: randomize, all empty, all full
+ - Option to directly manipulare the grid
+ - Autoplay: do evolution without manually clicking 'Next!' button
  - Make computation of new state more functional, perhaps with ClojureScript
  
  

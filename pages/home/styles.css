@@ -15,3 +15,11 @@
   }
 
 }
+
+blockquote {
+  font-size: 18px;
+}
+
+.quoteLink {
+  text-align: right;
+}
